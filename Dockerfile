@@ -11,8 +11,8 @@ RUN apk add --no-cache --update --virtual .build-deps \
  && apk del .build-deps \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
  
-RUN gem install fluent-plugin-opensearch \
- && gem install fluent-plugin-netflow
+RUN gem install fluent-plugin-opensearch
+RUN gem install fluent-plugin-netflow
 
 #COPY fluent.conf /fluentd/etc/
 #COPY entrypoint.sh /bin/
